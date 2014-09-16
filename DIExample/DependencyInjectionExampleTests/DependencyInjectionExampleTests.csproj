@@ -60,7 +60,7 @@
     <Compile Include="Workflows\Foo\FooWorkflowFactoryTest.cs" />
     <Compile Include="Workflows\Shared\MockItemRepository.cs" />
     <Compile Include="Logging\MockLogger.cs" />
-    <Compile Include="Engine\MockWorkflow.cs" />
+    <Compile Include="Engine\Mocks\MockWorkflow.cs" />
     <Compile Include="Workflows\Foo\FooWorkflowTest.cs" />
     <Compile Include="Engine\WorkflowEngineTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
