@@ -10,8 +10,8 @@ namespace DependencyInjectionCounterexample
     {
         public void Run()
         {
-            FooSender processor = new FooSender();
-            processor.Send();
+            FooSender sender = new FooSender();
+            sender.Send();
         }
     }
 }
