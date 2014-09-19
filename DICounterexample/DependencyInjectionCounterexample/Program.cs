@@ -10,7 +10,7 @@ namespace DependencyInjectionCounterexample
     class Program
     {
         //Non-modular application
-        //No use of interfaces (other than IEnumerable) or dependency injection
+        //No use of dependency injection and only two interfaces (IEnumerable and IWorkflow)
 
         static void Main(string[] args)
         {
