@@ -10,22 +10,21 @@ namespace DependencyInjectionCounterexample
     {
         public void Start()
         {
-            var logger = new Logger();
+            var logger = new ConsoleLogger();
 
             logger.Log("Starting all workflows...");
 
-            logger.Log("Starting workflow...");
-            var fooWorkflow = new FooWorkflow();
-            fooWorkflow.Run();
-            logger.Log("Finished workflow");
+            var workflowProducer = new WorkflowProducer();
+            var workflows = workflowProducer.GetWorkflows();
 
-            logger.Log("Starting workflow...");
-            var barWorkflow = new BarWorkflow();
-            barWorkflow.Run();
-            logger.Log("Finished workflow");
+            foreach (var workflow in workflows)
+            {
+                logger.Log("Starting workflow...");
+                workflow.Run();
+                logger.Log("Finished workflow");
+            }
 
             logger.Log("Finished all workflows.");
-
         }
     }
 }

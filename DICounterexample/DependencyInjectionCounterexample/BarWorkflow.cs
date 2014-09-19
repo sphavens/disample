@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DependencyInjectionCounterexample
 {
-    class BarWorkflow
+    class BarWorkflow : IWorkflow
     {
         public void Run()
         {
@@ -15,7 +15,7 @@ namespace DependencyInjectionCounterexample
             var items = repo.GetAll();
             var bars = items.Where(i => i.IsBar)
                             .Select(i => new BarItem(i));
-            var logger = new Logger();
+            var logger = new ConsoleLogger();
 
             foreach (var bar in bars)
             {

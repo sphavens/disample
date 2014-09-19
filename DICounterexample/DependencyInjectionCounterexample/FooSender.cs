@@ -13,7 +13,7 @@ namespace DependencyInjectionCounterexample
         {
             FooProcessor processor = new FooProcessor();
             IEnumerable<FooItem> foos = processor.ProcessFoos();
-            var logger = new Logger();
+            var logger = new ConsoleLogger();
 
             foreach (var foo in foos)
             {

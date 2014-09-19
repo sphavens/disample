@@ -34,7 +34,7 @@ namespace DependencyInjectionExample
             //This is referred to as the "composition root" of a modular application.
             //There are several ways of implementing it, but I'm doing the simple route of hard coding the modules.
 
-            var defaultLogger = new Logger();
+            var defaultLogger = new ConsoleLogger();
             var defaultItemRepository = new ItemRepository();
 
             _defaultWorkflowEngine = new WorkflowEngine(defaultLogger);

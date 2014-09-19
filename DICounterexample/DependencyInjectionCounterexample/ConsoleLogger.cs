@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DependencyInjectionExample
+namespace DependencyInjectionCounterexample
 {
-    class Logger : ILogger
+    class ConsoleLogger
     {
         public void Log(string description)
         {

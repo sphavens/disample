@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace DependencyInjectionCounterexample
 {
-    class Logger
+    public interface IWorkflow
     {
-        public void Log(string description)
-        {
-            Console.WriteLine(description);
-        }
+        void Run();
     }
 }

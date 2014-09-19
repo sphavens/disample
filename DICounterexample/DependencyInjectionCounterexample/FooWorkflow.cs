@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DependencyInjectionCounterexample
 {
-    class FooWorkflow
+    class FooWorkflow : IWorkflow
     {
         public void Run()
         {
